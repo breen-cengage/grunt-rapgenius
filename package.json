@@ -1,0 +1,10 @@
+{
+  "name": "grunt-rapgenius",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grunt.js",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "rapgenius-js": "^0.1.2"
+  }
+}
