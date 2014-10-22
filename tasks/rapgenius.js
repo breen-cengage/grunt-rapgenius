@@ -16,13 +16,12 @@ module.exports = function (grunt) {
                     songIndex = Math.floor(Math.random() * songs.length),
                     song = songs[songIndex],
                     garbagePrefix = 'http://rapgenius.com',
-                    link;
+                    link = song.link.substr(song.link.indexOf(garbagePrefix) + garbagePrefix.length);
 
                 grunt.log.writeln(artist.name + ' - ' + song.name);
                 grunt.log.writeln();
                 grunt.log.writeln();
 
-                link = song.link.substr(song.link.indexOf(garbagePrefix) + garbagePrefix.length);
                 rapgeniusClient.searchLyricsAndExplanations(link, 'rap', searchLyricsAndExplanationsCallback);
             }
         }
@@ -47,6 +46,6 @@ module.exports = function (grunt) {
             done();
         }
 
-        rapgeniusClient.searchArtist(artists, 'rap', searchArtistCallback);
+        rapgeniusClient.searchArtist(artist, 'rap', searchArtistCallback);
     });
 };
