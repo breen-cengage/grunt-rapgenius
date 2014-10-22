@@ -4,7 +4,9 @@
   "description": "",
   "main": "grunt.js",
   "devDependencies": {
-    "grunt": "~0.4.0",
+    "grunt": "~0.4.0"
+  },
+  "dependencies": {
     "rapgenius-js": "^0.1.2"
   }
 }
