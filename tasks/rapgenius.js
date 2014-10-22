@@ -2,7 +2,7 @@ var rapgeniusClient = require('rapgenius-js');
 
 module.exports = function (grunt) {
     grunt.registerTask('rapgenius', 'Rap Genius', function () {
-        var artists = require('../artists.json'),
+        var artists = this.options().artists || require('../artists.json'),
             done = this.async(),
             artistIndex = Math.floor(Math.random() * artists.length),
             artist = artists[artistIndex];
